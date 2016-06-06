@@ -1,5 +1,5 @@
-mp = 1863
-fg = 398
+mp = 2750
+fg = 656
 
 points = matrix(
   c(0,0,240,3000,805,3000,fg,mp),
@@ -20,8 +20,8 @@ if((2900-mp)>mp){
   bench = 1-(volume+scorer)
 }
 
-plot(points)
+plot(points,xlab = 'Field Goals',ylab = 'Minutes')
 
 cat("Scorer: ",scorer)
-cat("Pure Volume: ",volume)
+cat("Volume: ",volume)
 cat("Bench: ",bench)
