@@ -1,5 +1,5 @@
-mp = 370
-fg = 77
+mp = 1863
+fg = 398
 
 points = matrix(
   c(0,0,240,3000,805,3000,fg,mp),
@@ -10,16 +10,18 @@ points = matrix(
 
 fgerror = abs(fg-805)/805
 mperror = abs(mp-2900)/2900
-error = (1-((fgerror+mperror)/2))/.95
+scorer = (1-((fgerror+mperror)/2))/.95
 
-if((2900-mp)<mp) {
-  volume = mperror
+if((2900-mp)>mp){
+  bench = mperror
+  volume = 1-(bench+scorer)
 } else {
-  volume = 1-mperror
+  volume = mperror
+  bench = 1-(volume+scorer)
 }
 
 plot(points)
 
-cat("Scorer: ",error)
+cat("Scorer: ",scorer)
 cat("Pure Volume: ",volume)
-cat("Bench: ",(1-volume))
+cat("Bench: ",bench)
