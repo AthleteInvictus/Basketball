@@ -42,8 +42,8 @@ elsif e > 9
 end 
 
 m = (exp * cap) * n
-max = ((exp*cap) * y) + (m * y)
-money = ((exp*cap) * years) + (m * years)
+max = ((exp*cap) * y) + (m * (y-1))
+money = ((exp*cap) * years) + (m * (years-1))
 puts "This player can sign for up to #{y} years and #{max} million dollars."
 puts "With a #{years} year contract, this player would earn #{money} million dollars."
 
