@@ -1,14 +1,14 @@
-pts1 <- 5.6
-reb1 <- 1.9
-ast1 <- 2.3
-threepa1 <- 1.3
-fga1 <- 5.1
+pts1 <- 20.8
+reb1 <- 3.4
+ast1 <- 5.5
+threepa1 <- 4.7
+fga1 <- 16.7
 
-pts2 <- 27.2
-reb2 <- 7.2
-ast2 <- 6.9
-threepa2 <- 4.1
-fga2 <- 11.2
+pts2 <- 21.4
+reb2 <- 3.8
+ast2 <- 6.3
+threepa2 <- 7
+fga2 <- 16.9
 
 pts = 1-(abs(pts1-pts2)/pts2)
 reb = 1-(abs(reb1-reb2)/reb2)
